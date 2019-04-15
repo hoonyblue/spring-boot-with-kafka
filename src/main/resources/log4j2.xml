@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <Appenders>
+<!--     
+		<appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+			<param name="Target" value="System.out" />
+			<encoder>
+				<pattern>%d %5p [%c][%M:%L] %m%n</pattern>
+			</encoder>
+		</appender>
+ -->		
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d %5p [%c][%M:%L] %m%n" />
+        </Console>		
+ 	</Appenders>
+    
+    <Loggers>
+    
+		<Logger name="org.springframework" level="DEBUG" additivity="false"><AppenderRef ref="console" /> </Logger>
+		<Logger name="org.springframework.web.client" level="DEBUG" additivity="false"><AppenderRef ref="console" /> </Logger>
+		<Logger name="org.springframework.http" level="DEBUG" additivity="false"><AppenderRef ref="console" /> </Logger>
+		<Logger name="org.springframework.beans" level="WARN" additivity="false"><AppenderRef ref="console" /></Logger>
+		<Logger name="org.springframework.context" level="WARN" additivity="false"><AppenderRef ref="console" /></Logger>
+		<Logger name="org.springframework.boot.web" level="INFO" additivity="false"><AppenderRef ref="console" /></Logger>
+
+		<Logger name="org.mybatis.spring" level="INFO" additivity="false"><AppenderRef ref="console" /></Logger>
+		<Logger name="org.apache.http" level="DEBUG" additivity="false"><AppenderRef ref="console" /></Logger>
+		<Logger name="org.apache.http.wire" level="INFO" additivity="false"><AppenderRef ref="console" /></Logger>
+		<Logger name="org.apache.http.client" level="INFO" additivity="false"><AppenderRef ref="console" /></Logger>
+		<Logger name="org.apache.http.impl" level="INFO" additivity="false"><AppenderRef ref="console" /></Logger>
+		<Logger name="org.apache.activemq" level="INFO" additivity="false"><AppenderRef ref="console" /></Logger>
+		
+		<Logger name="org.mybatis" level="DEBUG" additivity="false"><AppenderRef ref="console" /></Logger>
+		<Logger name="jdbc.audit" level="ERROR" additivity="false"><AppenderRef ref="console" /></Logger>
+		<Logger name="jdbc.connection" level="ERROR" additivity="false"><AppenderRef ref="console" /></Logger>
+		<Logger name="jdbc.resultset" level="ERROR" additivity="false"><AppenderRef ref="console" /></Logger>
+		<Logger name="jdbc.resultsettable" level="ERROR" additivity="false"><AppenderRef ref="console" /></Logger>
+		<Logger name="jdbc.sqlonly" level="ERROR" additivity="false"><AppenderRef ref="console" /></Logger>
+		<Logger name="jdbc.sqltiming" level="DEBUG" additivity="false"><AppenderRef ref="console" /></Logger>
+		
+		<Logger name="ncis.batch" level="DEBUG" additivity="false"><AppenderRef ref="console" /></Logger>
+		<Logger name="ncis.batch.job.sql" level="INFO" additivity="false"><AppenderRef ref="console" /></Logger>
+		<Logger name="ncis.bat" level="DEBUG" additivity="false"><AppenderRef ref="console" /></Logger>
+		<Logger name="ncis.bat.sql" level="INFO" additivity="false"><AppenderRef ref="console" /></Logger>
+		<Root level="DEBUG">
+			<AppenderRef ref="console" />
+        </Root>
+    </Loggers>
+
+</configuration>
